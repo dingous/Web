@@ -1,0 +1,130 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Integração com as API's</h1>
+</div>
+
+
+<fieldset class="border p-2">
+	<legend class="w-auto">Api 1</legend>
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="form-row col-3">
+
+				<div class="form-group col-md-6">
+					<input type="button" value="Consultar taxa de juros" class="btn btn-info" id="btnConsultaTaxaJuros" />
+				</div>
+
+			</div>
+
+			<div class="form-row col-3">
+
+				<div class="form-row">
+					<span class="result" id="result1"></span>
+				</div>
+
+			</div>
+		</div>
+
+		<hr class="style6">
+
+		<div class="form-row col-12">
+
+			<a class="btn btn-secondary" href="http://localhost:7878/swagger/index.html" target="_blank" role="button">Swagger</a>
+
+		</div>
+
+
+</fieldset>
+
+
+
+<fieldset class="border p-2">
+	<legend class="w-auto">Api 2</legend>
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="form-row col-6">
+
+				<div class="form-group col-md-4">
+					<label for="inputEmail4">Valor inicial</label>
+					<input type="number" class="form-control" value="100" id="ValorInicial" placeholder="Valor inicial">
+				</div>
+				<div class="form-group col-md-4">
+					<label for="inputPassword4">Meses</label>
+					<input type="number" class="form-control" value="5" id="Meses" placeholder="Meses">
+				</div>
+
+
+
+				<div class="form-group col-md-6">
+					<input type="button" value="Calcular juros" class="btn btn-info" id="btnTaxaJuros" />
+				</div>
+
+				<div class="form-group col-md-4">
+					<span class="result" id="result2"></span>
+				</div>
+
+
+			</div>
+
+		</div>
+
+		<hr class="style6">
+
+		<div class="row">
+
+			<div class="form-row col-3">
+
+				<div class="form-group col-md-6">
+					<input type="button" value="Show me the code" class="btn btn-info" id="btnShowmecode" />
+				</div>
+
+			</div>
+
+			<div class="form-row col-12">
+
+				<div class="form-row">
+
+					<table class="table" id="tabelaGit" style="display:none;">
+						<thead class="thead-dark">
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Aplicação</th>
+								<th scope="col">Url Código</th>
+							</tr>
+						</thead>
+						<tbody id="result3">
+						</tbody>
+
+					</table>
+				</div>
+
+			</div>
+		</div>
+
+		<hr class="style6">
+
+		<div class="form-row" style="margin-top:20px;">
+			<div class="form-row col-12">
+
+				<a class="btn btn-secondary" href="http://localhost:7979/swagger/index.html" target="_blank" role="button">Swagger</a>
+
+
+			</div>
+		</div>
+
+</fieldset>
+
+
+
+
+<input type="hidden" id="UrlApi1" value="@ViewBag.UrlApi1" />
+<input type="hidden" id="UrlApi2" value="@ViewBag.UrlApi2" />
