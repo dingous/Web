@@ -10,7 +10,7 @@ services:
       - "api1"
       - "api2"
     ports:
-      - "8888:80" 
+      - "9090:80" 
 
   api1:
     image: dingous/api1
